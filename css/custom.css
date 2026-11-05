@@ -160,6 +160,41 @@ main {
   border-bottom: 1px solid var(--bs-border-color);
 }
 
+/* Фотографии в карточках каталога и мастеров */
+.card-photo {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  object-position: center 16%;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.card-photo--lion {
+  object-position: center 28%;
+}
+
+.card-photo--mid {
+  object-position: center 55%;
+}
+
+.card-photo--low {
+  object-position: center 85%;
+}
+
+/* Интерактивная Яндекс Карта на странице контактов */
+.map-frame-wrap {
+  min-height: 360px;
+  border: 1px solid var(--bs-border-color);
+}
+
+.yandex-map-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  border: 0;
+  display: block;
+}
+
 .card-icon-badge {
   width: 2.75rem;
   height: 2.75rem;
