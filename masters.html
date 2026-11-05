@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мастера барбершопа BarberLine: категории барберов, стаж работы, специализация и онлайн-запись.">
+  <title>Наши мастера — Барбершоп BarberLine</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Шапка страницы -->
+  <header class="bg-primary text-white py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-8">
+          <h1 class="h4 mb-1 fw-bold">BarberLine — мужской барбершоп</h1>
+          <p class="mb-0 small opacity-75">
+            Каталог услуг, мужской уход и онлайн-запись на Bootstrap 5
+          </p>
+        </div>
+        <div class="col-12 col-md-4 text-md-end mt-2 mt-md-0">
+          <span class="badge bg-light text-primary me-2">КР №2</span>
+          <span class="small">Ежедневно 10:00–22:00</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Адаптивная навигация Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">BarberLine</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalog.html">Каталог и цены</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="masters.html">Наши мастера</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">О нас и контакты</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#faq">FAQ</a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <button
+              class="btn btn-primary btn-sm"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#bookingModal"
+            >
+              Онлайн-запись
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <!-- Хлебные крошки -->
+    <nav aria-label="Хлебные крошки" class="mb-3">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Наши мастера</li>
+      </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+      <div>
+        <h2 class="mb-1">Наши мастера</h2>
+        <p class="text-muted mb-0">
+          Познакомьтесь с командой барберов, выберите специалиста по опыту и запишитесь в один клик.
+        </p>
+      </div>
+      <a class="btn btn-outline-primary btn-sm" href="#tiersComparison">Сравнение категорий мастеров</a>
+    </div>
+
+    <!-- Информационное сообщение Bootstrap alert -->
+    <div class="alert alert-info mb-4" role="alert">
+      <strong>Совет перед записью:</strong> если вы хотите кардинально сменить форму стрижки или отрастить бороду с нуля,
+      рекомендуем записаться к <strong>Топ-барберу</strong> или <strong>Старшему барберу</strong>.
+    </div>
+
+    <!-- Сетка карточек барберов -->
+    <section aria-label="Команда мастеров">
+      <div class="row g-4">
+
+        <!-- 1. Алексей Морозов -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm master-card border-primary">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+              <span class="small text-uppercase text-muted">Профиль мастера</span>
+              <strong class="fs-5 mt-1">А. М. · Кресло №1</strong>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-primary">Топ-барбер</span>
+                <span class="badge bg-light text-dark border ms-1">Стаж 8 лет</span>
+              </div>
+              <h3 class="card-title h5">Алексей Морозов</h3>
+              <p class="card-text text-muted">
+                Ведущий мастер зала. Специализируется на классических ножницах, удлинённых мужских стрижках и полном подборе имиджа.
+              </p>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><strong>Специализация:</strong> Классика, удлинённые формы, сложная борода</li>
+                <li><strong>Смены:</strong> Вт, Чт, Сб, Вс (10:00–22:00)</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <button
+                  class="btn btn-primary w-100"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-master="Алексей Морозов (Топ-барбер)"
+                >
+                  Записаться к Алексею
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2. Дмитрий Соколов -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm master-card border-primary">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+              <span class="small text-uppercase text-muted">Профиль мастера</span>
+              <strong class="fs-5 mt-1">Д. С. · Кресло №2</strong>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-primary">Топ-барбер</span>
+                <span class="badge bg-light text-dark border ms-1">Стаж 6 лет</span>
+              </div>
+              <h3 class="card-title h5">Дмитрий Соколов</h3>
+              <p class="card-text text-muted">
+                Эксперт по королевскому бритью опасной бритвой и геометрическому оформлению густых бород.
+              </p>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><strong>Специализация:</strong> Королевское бритьё, борода, текстурный кроп</li>
+                <li><strong>Смены:</strong> Пн, Ср, Пт, Сб (10:00–22:00)</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <button
+                  class="btn btn-primary w-100"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-master="Дмитрий Соколов (Топ-барбер)"
+                >
+                  Записаться к Дмитрию
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. Илья Ковалёв -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm master-card">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+              <span class="small text-uppercase text-muted">Профиль мастера</span>
+              <strong class="fs-5 mt-1">И. К. · Кресло №3</strong>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-info text-dark">Старший барбер</span>
+                <span class="badge bg-light text-dark border ms-1">Стаж 5 лет</span>
+              </div>
+              <h3 class="card-title h5">Илья Ковалёв</h3>
+              <p class="card-text text-muted">
+                Мастер точных фейдов и коротких спортивных стрижек. Подбирает укладку, которая занимает не больше двух минут утром.
+              </p>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><strong>Специализация:</strong> Skin Fade, кроп, цезарь, окантовка</li>
+                <li><strong>Смены:</strong> Пн, Вт, Пт, Вс (10:00–22:00)</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <button
+                  class="btn btn-outline-primary w-100"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-master="Илья Ковалёв (Старший барбер)"
+                >
+                  Записаться к Илье
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4. Артём Лебедев -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm master-card">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+              <span class="small text-uppercase text-muted">Профиль мастера</span>
+              <strong class="fs-5 mt-1">А. Л. · Кресло №4</strong>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-info text-dark">Старший барбер</span>
+                <span class="badge bg-light text-dark border ms-1">Стаж 4 года</span>
+              </div>
+              <h3 class="card-title h5">Артём Лебедев</h3>
+              <p class="card-text text-muted">
+                Внимательный мастер универсального профиля. Отлично находит общий язык с детьми на комплексе «Отец + Сын».
+              </p>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><strong>Специализация:</strong> Повседневная классика, детские стрижки</li>
+                <li><strong>Смены:</strong> Ср, Чт, Сб, Вс (10:00–21:00)</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <button
+                  class="btn btn-outline-primary w-100"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-master="Артём Лебедев (Старший барбер)"
+                >
+                  Записаться к Артёму
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 5. Максим Орлов -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm master-card">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+              <span class="small text-uppercase text-muted">Профиль мастера</span>
+              <strong class="fs-5 mt-1">М. О. · Кресло №5</strong>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Барбер</span>
+                <span class="badge bg-light text-dark border ms-1">Стаж 2,5 года</span>
+              </div>
+              <h3 class="card-title h5">Максим Орлов</h3>
+              <p class="card-text text-muted">
+                Специалист по современным молодёжным текстурам, аккуратным бокам и естественному оформлению щетины.
+              </p>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><strong>Специализация:</strong> Фейд, бокс, полубокс, моделирование щетины</li>
+                <li><strong>Смены:</strong> Пн, Ср, Чт, Пт (10:00–22:00)</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <button
+                  class="btn btn-outline-primary w-100"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-master="Максим Орлов (Барбер)"
+                >
+                  Записаться к Максиму
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 6. Никита Волков -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm master-card">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+              <span class="small text-uppercase text-muted">Профиль мастера</span>
+              <strong class="fs-5 mt-1">Н. В. · Кресло №6</strong>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Барбер</span>
+                <span class="badge bg-light text-dark border ms-1">Стаж 2 года</span>
+              </div>
+              <h3 class="card-title h5">Никита Волков</h3>
+              <p class="card-text text-muted">
+                Аккуратно выполняет стрижки машинкой и ножницами, консультирует по ежедневному домашнему уходу за волосами.
+              </p>
+              <ul class="list-unstyled small text-muted mb-3">
+                <li><strong>Специализация:</strong> Стрижка машинкой, классический пробор, уход</li>
+                <li><strong>Смены:</strong> Вт, Пт, Сб, Вс (10:00–21:00)</li>
+              </ul>
+              <div class="mt-auto pt-3 border-top">
+                <button
+                  class="btn btn-outline-primary w-100"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                  data-master="Никита Волков (Барбер)"
+                >
+                  Записаться к Никите
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Таблица сравнения категорий мастеров -->
+    <section class="my-5" id="tiersComparison">
+      <h2 class="h4 mb-3">Сравнение категорий мастеров BarberLine</h2>
+      <div class="table-responsive shadow-sm rounded">
+        <table class="table table-bordered table-striped table-hover align-middle mb-0 bg-white">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Критерий</th>
+              <th scope="col">Барбер</th>
+              <th scope="col">Старший барбер</th>
+              <th scope="col">Топ-барбер</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Опыт работы в индустрии</td>
+              <td>От 2 лет</td>
+              <td>От 4 лет</td>
+              <td>От 6 лет</td>
+            </tr>
+            <tr>
+              <td>Мытьё головы до и после стрижки + укладка</td>
+              <td>Включено</td>
+              <td>Включено</td>
+              <td>Включено</td>
+            </tr>
+            <tr>
+              <td>Подбор новой формы при смене имиджа</td>
+              <td>Базовая консультация</td>
+              <td>Развёрнутая консультация</td>
+              <td>Полный разбор формы лица и структуры волос</td>
+            </tr>
+            <tr>
+              <td>Работа с удлинёнными стрижками ножницами</td>
+              <td>Средняя длина</td>
+              <td>Любая длина</td>
+              <td>Любая длина и сложная градуировка</td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Стоимость мужской стрижки</td>
+              <td class="fw-semibold">1 500 руб.</td>
+              <td class="fw-semibold">1 800 руб.</td>
+              <td class="fw-semibold">2 100 руб.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-12 col-md-6">
+          <p class="mb-1 fw-semibold">&copy; 2026 BarberLine — Сайт барбершопа</p>
+          <p class="mb-0 small text-secondary">
+            Учебный проект КР №2 (Bootstrap 5) · Серебренников Матвей, ЭФБО-11-25
+          </p>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <a class="text-white text-decoration-none me-3" href="index.html">Главная</a>
+          <a class="text-white text-decoration-none me-3" href="catalog.html">Каталог</a>
+          <a class="text-white text-decoration-none" href="contacts.html">Контакты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно онлайн-записи -->
+  <div
+    class="modal fade"
+    id="bookingModal"
+    tabindex="-1"
+    aria-labelledby="bookingModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h2 class="modal-title h5" id="bookingModalLabel">Онлайн-запись в BarberLine</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <div id="modalSuccessAlert" class="alert alert-success d-none" role="alert"></div>
+
+          <form id="bookingModalForm" class="needs-validation" data-alert-target="modalSuccessAlert" novalidate>
+            <div class="mb-3">
+              <label for="modalClientName" class="form-label">Ваше имя</label>
+              <input
+                type="text"
+                class="form-control"
+                id="modalClientName"
+                name="clientName"
+                placeholder="Например, Матвей"
+                required
+              >
+              <div class="invalid-feedback">Пожалуйста, укажите ваше имя.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="modalPhone" class="form-label">Телефон для связи</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">+7</span>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="modalPhone"
+                  name="phone"
+                  placeholder="(999) 123-45-67"
+                  pattern="[0-9\s\-\(\)]{10,16}"
+                  required
+                >
+                <div class="invalid-feedback">Введите корректный номер телефона (10 цифр).</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="modalService" class="form-label">Услуга или товар</label>
+              <select class="form-select" id="modalService" name="service" required>
+                <option value="Мужская стрижка (1 500 руб.)">Мужская стрижка (1 500 руб.)</option>
+                <option value="Стрижка машинкой / Фейд (1 100 руб.)">Стрижка машинкой / Фейд (1 100 руб.)</option>
+                <option value="Детская стрижка до 12 лет (1 200 руб.)">Детская стрижка до 12 лет (1 200 руб.)</option>
+                <option value="Моделирование бороды и усов (1 000 руб.)">Моделирование бороды и усов (1 000 руб.)</option>
+                <option value="Королевское бритьё опасной бритвой (1 400 руб.)">Королевское бритьё опасной бритвой (1 400 руб.)</option>
+                <option value="Комплекс «Стрижка + Борода» (2 200 руб.)">Комплекс «Стрижка + Борода» (2 200 руб.)</option>
+                <option value="Комплекс «Отец + Сын» (2 400 руб.)">Комплекс «Отец + Сын» (2 400 руб.)</option>
+                <option value="Матовая глина для укладки 100 мл (950 руб.)">Матовая глина для укладки 100 мл (950 руб.)</option>
+              </select>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-sm-7">
+                <label for="modalMaster" class="form-label">Мастер</label>
+                <select class="form-select" id="modalMaster" name="master">
+                  <option value="Любой свободный мастер">Любой свободный мастер</option>
+                  <option value="Алексей Морозов (Топ-барбер)">Алексей Морозов (Топ-барбер)</option>
+                  <option value="Дмитрий Соколов (Топ-барбер)">Дмитрий Соколов (Топ-барбер)</option>
+                  <option value="Илья Ковалёв (Старший барбер)">Илья Ковалёв (Старший барбер)</option>
+                  <option value="Артём Лебедев (Старший барбер)">Артём Лебедев (Старший барбер)</option>
+                  <option value="Максим Орлов (Барбер)">Максим Орлов (Барбер)</option>
+                  <option value="Никита Волков (Барбер)">Никита Волков (Барбер)</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-5">
+                <label for="modalDate" class="form-label">Желаемая дата</label>
+                <input type="date" class="form-control" id="modalDate" name="visitDate" required>
+                <div class="invalid-feedback">Выберите дату визита.</div>
+              </div>
+            </div>
+
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="modalConsent" required>
+              <label class="form-check-label small" for="modalConsent">
+                Согласен на обработку контактных данных для подтверждения записи
+              </label>
+              <div class="invalid-feedback">Необходимо подтвердить согласие.</div>
+            </div>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+              <button type="submit" class="btn btn-primary">Подтвердить запись</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTopBtn" class="btn btn-primary btn-sm shadow back-to-top" type="button" aria-label="Вернуться наверх">
+    Наверх
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

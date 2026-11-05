@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Пользовательские стили проекта BarberLine (КР №2 — Bootstrap 5)
+   Подключаются после Bootstrap CSS для минимальных уточнений интерфейса.
+   Основная раскладка и компоненты реализованы средствами Bootstrap 5.
+   ========================================================================== */
+
+:root {
+  --barber-accent: #0d6efd;
+  --barber-placeholder-bg: #f8f9fa;
+  --barber-placeholder-border: #dee2e6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Текстовые заглушки для баннеров и карточек (по методическим указаниям) */
+.placeholder-box {
+  min-height: 240px;
+  background-color: var(--barber-placeholder-bg);
+  border: 1px dashed var(--barber-placeholder-border);
+}
+
+.placeholder-card {
+  min-height: 140px;
+  background-color: var(--barber-placeholder-bg);
+  border-bottom: 1px solid var(--barber-placeholder-border);
+}
+
+/* Плавный отклик карточек услуг и мастеров при наведении */
+.service-card,
+.master-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover,
+.master-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Улучшенная видимость фокуса с клавиатуры (доступность) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(13, 110, 253, 0.45);
+  outline-offset: 2px;
+}
+
+/* Фиксированная кнопка быстрого возврата наверх */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1030;
+  display: none;
+}
+
+.back-to-top.is-visible {
+  display: inline-block;
+}
