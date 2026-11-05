@@ -1,13 +1,28 @@
 /* ==========================================================================
-   Пользовательские стили проекта barbermirea (КР №3 — Bootstrap 5)
-   Подключаются после Bootstrap CSS для минимальных уточнений интерфейса.
-   Основная раскладка и компоненты реализованы средствами Bootstrap 5.
+   Пользовательская тема проекта barbermirea (КР №3 — Bootstrap 5)
+   Кастомизация через CSS-переменные Bootstrap 5.3:
+   тёплый светлый фон, графитовая шапка/подвал и медный акцент барбершопа.
    ========================================================================== */
 
 :root {
-  --barber-accent: #0d6efd;
-  --barber-placeholder-bg: #f8f9fa;
-  --barber-placeholder-border: #dee2e6;
+  --bs-font-sans-serif: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bs-body-bg: #f6f3ee;
+  --bs-body-color: #1e1d1b;
+  --bs-primary: #a65a22;
+  --bs-primary-rgb: 166, 90, 34;
+  --bs-dark: #171719;
+  --bs-dark-rgb: 23, 23, 25;
+  --bs-light: #ece6dc;
+  --bs-light-rgb: 236, 230, 220;
+  --bs-border-color: #dfd8cc;
+  --bs-link-color: #9e531c;
+  --bs-link-hover-color: #7a3e12;
+
+  --barber-copper: #a65a22;
+  --barber-copper-dark: #884718;
+  --barber-copper-soft: #f5ebe1;
+  --barber-graphite: #171719;
+  --barber-graphite-soft: #232327;
 }
 
 html {
@@ -24,20 +39,115 @@ main {
   flex: 1 0 auto;
 }
 
-/* Текстовые заглушки для баннеров и карточек (по методическим указаниям) */
+/* Шапка с тонкой фирменной медной линией */
+.site-navbar {
+  background-color: var(--barber-graphite);
+  border-bottom: 2px solid var(--barber-copper);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--barber-copper);
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+/* Темизация кнопок через штатные переменные Bootstrap 5.3 */
+.btn-primary {
+  --bs-btn-bg: var(--barber-copper);
+  --bs-btn-border-color: var(--barber-copper);
+  --bs-btn-hover-bg: var(--barber-copper-dark);
+  --bs-btn-hover-border-color: var(--barber-copper-dark);
+  --bs-btn-active-bg: #733b13;
+  --bs-btn-active-border-color: #733b13;
+  --bs-btn-disabled-bg: var(--barber-copper);
+  --bs-btn-disabled-border-color: var(--barber-copper);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--barber-copper);
+  --bs-btn-border-color: var(--barber-copper);
+  --bs-btn-hover-bg: var(--barber-copper);
+  --bs-btn-hover-border-color: var(--barber-copper);
+  --bs-btn-active-bg: var(--barber-copper-dark);
+  --bs-btn-active-border-color: var(--barber-copper-dark);
+}
+
+/* Поля ввода, чекбоксы и аккордеон в единой тёплой гамме */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--barber-copper);
+  box-shadow: 0 0 0 0.2rem rgba(166, 90, 34, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: var(--barber-copper);
+  border-color: var(--barber-copper);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--barber-copper-soft);
+  color: #5c2e0e;
+  box-shadow: inset 0 -1px 0 var(--bs-border-color);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(166, 90, 34, 0.2);
+}
+
+/* Фирменные информационные блоки вместо стандартных серых заглушек */
 .placeholder-box {
   min-height: 240px;
-  background-color: var(--barber-placeholder-bg);
-  border: 1px dashed var(--barber-placeholder-border);
+  background: linear-gradient(145deg, var(--barber-graphite) 0%, var(--barber-graphite-soft) 100%);
+  color: #f8f5f0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.placeholder-box .stat-tile {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
 }
 
 .placeholder-card {
-  min-height: 140px;
-  background-color: var(--barber-placeholder-bg);
-  border-bottom: 1px solid var(--barber-placeholder-border);
+  min-height: 136px;
+  background: linear-gradient(180deg, #EFE9DF 0%, #E7DFD2 100%);
+  border-bottom: 1px solid var(--bs-border-color);
 }
 
-/* Плавный отклик карточек услуг и мастеров при наведении */
+.card-icon-badge {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: var(--barber-copper);
+  border: 1px solid var(--bs-border-color);
+  font-size: 1.2rem;
+}
+
+/* Карточки и таблицы */
+.card {
+  border-radius: 0.85rem;
+  border-color: var(--bs-border-color);
+  overflow: hidden;
+}
+
 .service-card,
 .master-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -45,20 +155,34 @@ main {
 
 .service-card:hover,
 .master-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 0.65rem 1.4rem rgba(23, 23, 25, 0.09) !important;
 }
 
-/* Улучшенная видимость фокуса с клавиатуры (доступность) */
+/* Тёплое информационное уведомление */
+.alert-barber {
+  background-color: var(--barber-copper-soft);
+  border: 1px solid #e2c4a8;
+  color: #4f290d;
+}
+
+/* Подвал сайта */
+.site-footer {
+  background-color: var(--barber-graphite);
+  border-top: 2px solid var(--barber-copper);
+}
+
+/* Доступность с клавиатуры */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid rgba(13, 110, 253, 0.45);
+  outline: 3px solid rgba(166, 90, 34, 0.45);
   outline-offset: 2px;
 }
 
-/* Фиксированная кнопка быстрого возврата наверх */
+/* Фиксированная кнопка «Наверх» */
 .back-to-top {
   position: fixed;
   right: 1.25rem;

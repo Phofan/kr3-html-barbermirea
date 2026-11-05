@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="barbermirea — мужской барбершоп: каталог услуг, мужская косметика и онлайн-запись.">
   <title>Главная — Барбершоп barbermirea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="css/custom.css">
@@ -15,9 +25,12 @@
 
   <!-- Шапка и адаптивная навигация Bootstrap -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Основная навигация">
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar py-2" aria-label="Основная навигация">
       <div class="container">
-        <a class="navbar-brand fw-semibold" href="index.html">barbermirea</a>
+        <a class="navbar-brand fw-bold brand-mark" href="index.html">
+          <span class="brand-mark__icon" aria-hidden="true"><i class="bi bi-scissors"></i></span>
+          <span>barbermirea</span>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,12 +62,12 @@
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
               <button
-                class="btn btn-primary btn-sm"
+                class="btn btn-primary btn-sm px-3"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#bookingModal"
               >
-                Онлайн-запись
+                <i class="bi bi-calendar2-check me-1" aria-hidden="true"></i>Онлайн-запись
               </button>
             </li>
           </ul>
@@ -68,7 +81,7 @@
     <section class="container my-5">
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-6">
-          <span class="badge bg-primary mb-3">Мужские стрижки и уход</span>
+          <span class="badge bg-dark px-3 py-2 mb-3">Мужские стрижки · Борода · Уход</span>
           <h1 class="display-5 fw-bold mb-3">
             Точная мужская стрижка и уход за бородой без очередей
           </h1>
@@ -78,7 +91,7 @@
           </p>
           <div class="d-flex flex-wrap gap-2">
             <button
-              class="btn btn-primary btn-lg"
+              class="btn btn-primary btn-lg px-4"
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#bookingModal"
@@ -86,37 +99,39 @@
             >
               Записаться на стрижку
             </button>
-            <a class="btn btn-outline-primary btn-lg" href="catalog.html">
-              Перейти в каталог
+            <a class="btn btn-outline-primary btn-lg px-4" href="catalog.html">
+              Смотреть каталог
             </a>
           </div>
         </div>
 
         <div class="col-12 col-lg-6">
-          <div class="placeholder-box p-5 rounded text-center d-flex flex-column justify-content-center">
-            <span class="badge bg-secondary align-self-center mb-3">Главный зал barbermirea</span>
-            <h3 class="h5 fw-semibold mb-2">Классические и современные мужские стрижки</h3>
-            <p class="text-muted mb-4">
-              Информационный промо-блок барбершопа: 6 рабочих кресел, мойка головы до и после стрижки,
-              подбор укладки под тип волос.
+          <div class="placeholder-box p-4 p-md-5 rounded-4 shadow-sm text-center d-flex flex-column justify-content-center">
+            <span class="badge bg-primary align-self-center px-3 py-2 mb-3">
+              <i class="bi bi-geo-alt me-1" aria-hidden="true"></i>м. Юго-Западная · Ежедневно 10:00–22:00
+            </span>
+            <h2 class="h4 fw-bold mb-2">Атмосфера классического мужского зала</h2>
+            <p class="small text-white-50 mb-4">
+              Шесть удобных кресел, мытьё головы до и после стрижки, горячий компресс
+              и индивидуальный подбор укладки под тип волос.
             </p>
             <div class="row g-2 text-center">
               <div class="col-4">
-                <div class="p-2 bg-white border rounded">
-                  <div class="fw-bold text-primary">6</div>
-                  <div class="small text-muted">барберов</div>
+                <div class="p-3 rounded-3 stat-tile">
+                  <div class="fs-5 fw-bold">6</div>
+                  <div class="small text-white-50">барберов</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="p-2 bg-white border rounded">
-                  <div class="fw-bold text-primary">45 мин</div>
-                  <div class="small text-muted">сеанс стрижки</div>
+                <div class="p-3 rounded-3 stat-tile">
+                  <div class="fs-5 fw-bold">45 мин</div>
+                  <div class="small text-white-50">сеанс стрижки</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="p-2 bg-white border rounded">
-                  <div class="fw-bold text-primary">4.9 / 5</div>
-                  <div class="small text-muted">оценка гостей</div>
+                <div class="p-3 rounded-3 stat-tile">
+                  <div class="fs-5 fw-bold">4.9 / 5</div>
+                  <div class="small text-white-50">оценка гостей</div>
                 </div>
               </div>
             </div>
@@ -130,7 +145,7 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-4">
           <div class="col-12 col-lg-8">
-            <h2 class="mb-2">О барбершопе и наши преимущества</h2>
+            <h2 class="fw-bold mb-2">О барбершопе и наши преимущества</h2>
             <p class="text-muted mb-0">
               Мы объединили классические традиции мужских парикмахерских и понятный современный сервис:
               фиксированные цены, стерильный инструмент и внимание к деталям.
@@ -140,40 +155,48 @@
 
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-3">
-            <div class="p-4 border rounded h-100 bg-white shadow-sm">
-              <span class="badge bg-primary mb-3">01</span>
-              <h3 class="h5">Опытные барберы</h3>
-              <p class="mb-0 text-muted">
+            <div class="p-4 border rounded-4 h-100 bg-white shadow-sm">
+              <div class="card-icon-badge mb-3" aria-hidden="true">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3 class="h5 fw-semibold">Опытные барберы</h3>
+              <p class="mb-0 text-muted small">
                 Мастера со стажем от 2 до 8 лет помогут подобрать форму стрижки и бороды под форму лица.
               </p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-3">
-            <div class="p-4 border rounded h-100 bg-white shadow-sm">
-              <span class="badge bg-primary mb-3">02</span>
-              <h3 class="h5">Трёхэтапная стерилизация</h3>
-              <p class="mb-0 text-muted">
+            <div class="p-4 border rounded-4 h-100 bg-white shadow-sm">
+              <div class="card-icon-badge mb-3" aria-hidden="true">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3 class="h5 fw-semibold">Трёхэтапная стерилизация</h3>
+              <p class="mb-0 text-muted small">
                 Все насадки, ножницы и бритвы проходят обработку в растворе и сухожаровом шкафу после каждого гостя.
               </p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-3">
-            <div class="p-4 border rounded h-100 bg-white shadow-sm">
-              <span class="badge bg-primary mb-3">03</span>
-              <h3 class="h5">Мужская косметика</h3>
-              <p class="mb-0 text-muted">
+            <div class="p-4 border rounded-4 h-100 bg-white shadow-sm">
+              <div class="card-icon-badge mb-3" aria-hidden="true">
+                <i class="bi bi-droplet-half"></i>
+              </div>
+              <h3 class="h5 fw-semibold">Мужская косметика</h3>
+              <p class="mb-0 text-muted small">
                 Используем профессиональные матовые глины, тоники и масла для бороды, которые можно приобрести домой.
               </p>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-3">
-            <div class="p-4 border rounded h-100 bg-white shadow-sm">
-              <span class="badge bg-primary mb-3">04</span>
-              <h3 class="h5">Запись без звонков</h3>
-              <p class="mb-0 text-muted">
+            <div class="p-4 border rounded-4 h-100 bg-white shadow-sm">
+              <div class="card-icon-badge mb-3" aria-hidden="true">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h3 class="h5 fw-semibold">Запись без звонков</h3>
+              <p class="mb-0 text-muted small">
                 Выберите услугу, категорию мастера и удобную дату прямо на сайте за одну минуту.
               </p>
             </div>
@@ -182,11 +205,11 @@
       </div>
     </section>
 
-    <!-- Популярные услуги (компонент card + badge + сетка col-12 col-md-6 col-lg-4) -->
+    <!-- Популярные услуги -->
     <section class="container my-5" id="popular">
       <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
         <div>
-          <h2 class="mb-1">Популярные услуги</h2>
+          <h2 class="fw-bold mb-1">Популярные услуги</h2>
           <p class="text-muted mb-0">Самые востребованные процедуры нашего барбершопа</p>
         </div>
         <a class="btn btn-outline-primary" href="catalog.html">
@@ -197,16 +220,17 @@
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-scissors"></i></div>
               <span class="small text-uppercase text-muted">Категория: Стрижки</span>
-              <strong class="mt-1">Длительность: 45–60 минут</strong>
+              <strong class="small mt-1">Длительность: 45–60 минут</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
-                <span class="badge bg-warning text-dark">Хит</span>
+                <span class="badge bg-primary">Хит</span>
               </div>
-              <h3 class="card-title h5">Мужская стрижка</h3>
-              <p class="card-text text-muted">
+              <h3 class="card-title h5 fw-semibold">Мужская стрижка</h3>
+              <p class="card-text text-muted small">
                 Консультация мастера, мытьё головы дважды, стрижка ножницами и машинкой, укладка стайлингом.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -227,17 +251,18 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <article class="card h-100 shadow-sm service-card border-primary">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-stars"></i></div>
               <span class="small text-uppercase text-muted">Категория: Комплексы</span>
-              <strong class="mt-1">Длительность: 75–90 минут</strong>
+              <strong class="small mt-1">Длительность: 75–90 минут</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
                 <span class="badge bg-success">Выгодно</span>
-                <span class="badge bg-primary ms-1">-300 руб.</span>
+                <span class="badge bg-dark ms-1">-300 руб.</span>
               </div>
-              <h3 class="card-title h5">Комплекс «Стрижка + Борода»</h3>
-              <p class="card-text text-muted">
+              <h3 class="card-title h5 fw-semibold">Комплекс «Стрижка + Борода»</h3>
+              <p class="card-text text-muted small">
                 Полное обновление образа за один визит: мужская стрижка, моделирование бороды и чёткие контуры шейветкой.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -258,16 +283,17 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-fire"></i></div>
               <span class="small text-uppercase text-muted">Категория: Борода и бритьё</span>
-              <strong class="mt-1">Длительность: 40 минут</strong>
+              <strong class="small mt-1">Длительность: 40 минут</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
-                <span class="badge bg-info text-dark">Новинка</span>
+                <span class="badge bg-dark">Ритуал</span>
               </div>
-              <h3 class="card-title h5">Королевское бритьё</h3>
-              <p class="card-text text-muted">
+              <h3 class="card-title h5 fw-semibold">Королевское бритьё</h3>
+              <p class="card-text text-muted small">
                 Распаривание горячим полотенцем, густая пена из помазка, бритьё опасной бритвой со сменным лезвием и бальзам.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -291,17 +317,17 @@
     <!-- Отзывы клиентов -->
     <section class="container-fluid bg-light border-top border-bottom py-5" id="reviews">
       <div class="container">
-        <h2 class="text-center mb-4">Отзывы наших гостей</h2>
+        <h2 class="fw-bold text-center mb-4">Отзывы наших гостей</h2>
         <div class="row g-4">
           <div class="col-12 col-md-4">
             <article class="card h-100 shadow-sm">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-2">
                   <h3 class="h6 mb-0 fw-bold">Кирилл Романов</h3>
-                  <span class="badge bg-primary">5 / 5</span>
+                  <span class="badge bg-primary"><i class="bi bi-star-fill me-1" aria-hidden="true"></i>5.0</span>
                 </div>
                 <p class="small text-muted mb-2">Услуга: Комплекс «Стрижка + Борода»</p>
-                <p class="card-text mb-0">
+                <p class="card-text small mb-0">
                   Хожу к Алексею Морозову уже полгода. Стрижка держит форму месяц, никогда не приходится ждать своей записи.
                 </p>
               </div>
@@ -313,10 +339,10 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-2">
                   <h3 class="h6 mb-0 fw-bold">Павел Смирнов</h3>
-                  <span class="badge bg-primary">5 / 5</span>
+                  <span class="badge bg-primary"><i class="bi bi-star-fill me-1" aria-hidden="true"></i>5.0</span>
                 </div>
                 <p class="small text-muted mb-2">Услуга: Стрижка машинкой / Фейд</p>
-                <p class="card-text mb-0">
+                <p class="card-text small mb-0">
                   Очень чистый зал и спокойная атмосфера. Сделали ровный переход на висках и подсказали матовую глину для дома.
                 </p>
               </div>
@@ -328,10 +354,10 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-2">
                   <h3 class="h6 mb-0 fw-bold">Андрей Захаров</h3>
-                  <span class="badge bg-primary">5 / 5</span>
+                  <span class="badge bg-primary"><i class="bi bi-star-fill me-1" aria-hidden="true"></i>5.0</span>
                 </div>
                 <p class="small text-muted mb-2">Услуга: Комплекс «Отец + Сын»</p>
-                <p class="card-text mb-0">
+                <p class="card-text small mb-0">
                   Приходили вместе с сыном 9 лет. Мастера сработали синхронно в соседних креслах, уложились ровно за 50 минут.
                 </p>
               </div>
@@ -341,20 +367,20 @@
       </div>
     </section>
 
-    <!-- Частые вопросы (дополнительный компонент Bootstrap accordion) -->
+    <!-- Частые вопросы (Bootstrap accordion) -->
     <section class="container my-5" id="faq">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-9">
-          <h2 class="text-center mb-2">Частые вопросы (FAQ)</h2>
+          <h2 class="fw-bold text-center mb-2">Частые вопросы (FAQ)</h2>
           <p class="text-center text-muted mb-4">
             Ответы на основные вопросы перед визитом в барбершоп
           </p>
 
-          <div class="accordion shadow-sm" id="faqAccordion">
+          <div class="accordion shadow-sm rounded-3 overflow-hidden" id="faqAccordion">
             <div class="accordion-item">
               <h3 class="accordion-header" id="faqHeadingOne">
                 <button
-                  class="accordion-button"
+                  class="accordion-button fw-semibold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#faqCollapseOne"
@@ -380,7 +406,7 @@
             <div class="accordion-item">
               <h3 class="accordion-header" id="faqHeadingTwo">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#faqCollapseTwo"
@@ -407,7 +433,7 @@
             <div class="accordion-item">
               <h3 class="accordion-header" id="faqHeadingThree">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#faqCollapseThree"
@@ -433,7 +459,7 @@
             <div class="accordion-item">
               <h3 class="accordion-header" id="faqHeadingFour">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button collapsed fw-semibold"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#faqCollapseFour"
@@ -462,12 +488,12 @@
   </main>
 
   <!-- Подвал на сетке Bootstrap -->
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="site-footer text-white py-4 mt-5">
     <div class="container">
       <div class="row align-items-center g-3">
         <div class="col-12 col-md-6">
           <p class="mb-1 fw-semibold">&copy; 2026 barbermirea — Сайт барбершопа</p>
-          <p class="mb-0 small text-secondary">
+          <p class="mb-0 small text-white-50">
             Учебный проект КР №3 — Серебренников Матвей, ЭФБО-11-25
           </p>
         </div>
@@ -480,7 +506,7 @@
     </div>
   </footer>
 
-  <!-- Модальное окно онлайн-записи (Bootstrap Modal + формы) -->
+  <!-- Модальное окно онлайн-записи -->
   <div
     class="modal fade"
     id="bookingModal"
@@ -490,7 +516,7 @@
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header bg-primary text-white">
+        <div class="modal-header bg-dark text-white">
           <h2 class="modal-title h5" id="bookingModalLabel">Онлайн-запись в barbermirea</h2>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
@@ -581,7 +607,7 @@
   </div>
 
   <button id="backToTopBtn" class="btn btn-primary btn-sm shadow back-to-top" type="button" aria-label="Вернуться наверх">
-    Наверх
+    <i class="bi bi-arrow-up me-1" aria-hidden="true"></i>Наверх
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Каталог услуг барбершопа barbermirea и мужской косметики с фильтрами по категории и цене.">
   <title>Каталог услуг и косметики — Барбершоп barbermirea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="css/custom.css">
@@ -15,9 +25,12 @@
 
   <!-- Шапка и адаптивная навигация Bootstrap -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Основная навигация">
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar py-2" aria-label="Основная навигация">
       <div class="container">
-        <a class="navbar-brand fw-semibold" href="index.html">barbermirea</a>
+        <a class="navbar-brand fw-bold brand-mark" href="index.html">
+          <span class="brand-mark__icon" aria-hidden="true"><i class="bi bi-scissors"></i></span>
+          <span>barbermirea</span>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,12 +62,12 @@
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
               <button
-                class="btn btn-primary btn-sm"
+                class="btn btn-primary btn-sm px-3"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#bookingModal"
               >
-                Онлайн-запись
+                <i class="bi bi-calendar2-check me-1" aria-hidden="true"></i>Онлайн-запись
               </button>
             </li>
           </ul>
@@ -74,7 +87,7 @@
 
     <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
       <div>
-        <h1 class="h2 mb-1">Каталог услуг и мужской косметики</h1>
+        <h1 class="h2 fw-bold mb-1">Каталог услуг и мужской косметики</h1>
         <p class="text-muted mb-0">
           Используйте фильтры по категории, цене и названию, чтобы быстро выбрать нужную услугу или средство ухода.
         </p>
@@ -82,14 +95,14 @@
       <a class="btn btn-outline-primary btn-sm" href="#priceTable">Сводный прайс-лист</a>
     </div>
 
-    <!-- Панель фильтров на компонентах форм Bootstrap (input-group, form-select, form-check) -->
-    <section class="card bg-light shadow-sm mb-4" aria-label="Фильтры каталога">
+    <!-- Панель фильтров на компонентах форм Bootstrap -->
+    <section class="card bg-white shadow-sm mb-4" aria-label="Фильтры каталога">
       <div class="card-body">
         <div class="row g-3 align-items-end">
           <div class="col-12 col-md-4">
             <label for="catalogSearch" class="form-label fw-semibold small">Поиск по названию</label>
             <div class="input-group">
-              <span class="input-group-text">Поиск</span>
+              <span class="input-group-text bg-light"><i class="bi bi-search" aria-hidden="true"></i></span>
               <input
                 type="search"
                 class="form-control"
@@ -134,7 +147,7 @@
               Показывать только хиты и выгодные комплексы
             </label>
           </div>
-          <span id="catalogCount" class="badge bg-secondary">Показано позиций: 9 из 9</span>
+          <span id="catalogCount" class="badge bg-dark px-3 py-2">Показано позиций: 9 из 9</span>
         </div>
       </div>
     </section>
@@ -151,16 +164,17 @@
         <!-- 1. Мужская стрижка -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="haircut" data-price="1500" data-promo="true">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-scissors"></i></div>
               <span class="small text-uppercase text-muted">Мужские стрижки</span>
-              <strong class="mt-1">45–60 минут · Мытьё и укладка</strong>
+              <strong class="small mt-1">45–60 минут · Мытьё и укладка</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
-                <span class="badge bg-warning text-dark">Хит</span>
+                <span class="badge bg-primary">Хит</span>
               </div>
-              <h3 class="card-title h5">Мужская стрижка</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Мужская стрижка</h2>
+              <p class="card-text text-muted small">
                 Классическая или современная стрижка ножницами и машинкой с учётом роста волос и формы головы.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -182,16 +196,17 @@
         <!-- 2. Стрижка машинкой / Фейд -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="haircut" data-price="1100" data-promo="false">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-lightning-charge"></i></div>
               <span class="small text-uppercase text-muted">Мужские стрижки</span>
-              <strong class="mt-1">35–40 минут · Плавный переход</strong>
+              <strong class="small mt-1">35–40 минут · Плавный переход</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
-                <span class="badge bg-primary">Быстро</span>
+                <span class="badge bg-dark">Быстро</span>
               </div>
-              <h3 class="card-title h5">Стрижка машинкой / Фейд</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Стрижка машинкой / Фейд</h2>
+              <p class="card-text text-muted small">
                 Короткая стрижка под 1–3 насадки или чистый дымчатый переход с нуля (Skin Fade) с окантовкой.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -213,16 +228,17 @@
         <!-- 3. Детская стрижка -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="haircut" data-price="1200" data-promo="false">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-emoji-smile"></i></div>
               <span class="small text-uppercase text-muted">Мужские стрижки</span>
-              <strong class="mt-1">40 минут · Для мальчиков 5–12 лет</strong>
+              <strong class="small mt-1">40 минут · Для мальчиков 5–12 лет</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
                 <span class="badge bg-secondary">5–12 лет</span>
               </div>
-              <h3 class="card-title h5">Детская стрижка до 12 лет</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Детская стрижка до 12 лет</h2>
+              <p class="card-text text-muted small">
                 Аккуратная стрижка для юных гостей в комфортной обстановке, лёгкая укладка без резких отдушек.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -244,16 +260,17 @@
         <!-- 4. Моделирование бороды -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="beard" data-price="1000" data-promo="false">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-sliders"></i></div>
               <span class="small text-uppercase text-muted">Борода и бритьё</span>
-              <strong class="mt-1">30–40 минут · Чёткий контур</strong>
+              <strong class="small mt-1">30–40 минут · Чёткий контур</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
-                <span class="badge bg-primary">Уход</span>
+                <span class="badge bg-dark">Уход</span>
               </div>
-              <h3 class="card-title h5">Моделирование бороды и усов</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Моделирование бороды и усов</h2>
+              <p class="card-text text-muted small">
                 Придание правильной геометрии бороде, подбривание щёк и шеи, нанесение питательного масла.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -275,16 +292,17 @@
         <!-- 5. Королевское бритьё -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="beard" data-price="1400" data-promo="true">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-fire"></i></div>
               <span class="small text-uppercase text-muted">Борода и бритьё</span>
-              <strong class="mt-1">40 минут · Горячий компресс</strong>
+              <strong class="small mt-1">40 минут · Горячий компресс</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
-                <span class="badge bg-info text-dark">Новинка</span>
+                <span class="badge bg-primary">Популярно</span>
               </div>
-              <h3 class="card-title h5">Королевское бритьё опасной бритвой</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Королевское бритьё опасной бритвой</h2>
+              <p class="card-text text-muted small">
                 Традиционный ритуал гладкого бритья с распариванием полотенцем, тёплой пеной и охлаждающим лосьоном.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -306,17 +324,18 @@
         <!-- 6. Комплекс Стрижка + Борода -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="complex" data-price="2200" data-promo="true">
           <article class="card h-100 shadow-sm service-card border-primary">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-stars"></i></div>
               <span class="small text-uppercase text-muted">Выгодные комплексы</span>
-              <strong class="mt-1">75–90 минут · Экономия 300 руб.</strong>
+              <strong class="small mt-1">75–90 минут · Экономия 300 руб.</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
                 <span class="badge bg-success">Выгодно</span>
-                <span class="badge bg-warning text-dark ms-1">Хит</span>
+                <span class="badge bg-primary ms-1">Хит</span>
               </div>
-              <h3 class="card-title h5">Комплекс «Стрижка + Борода»</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Комплекс «Стрижка + Борода»</h2>
+              <p class="card-text text-muted small">
                 Гармоничное сочетание мужской стрижки и оформления бороды за один сеанс с финальной укладкой.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -338,16 +357,17 @@
         <!-- 7. Комплекс Отец + Сын -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="complex" data-price="2400" data-promo="true">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-people"></i></div>
               <span class="small text-uppercase text-muted">Выгодные комплексы</span>
-              <strong class="mt-1">60 минут · Два кресла рядом</strong>
+              <strong class="small mt-1">60 минут · Два кресла рядом</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
                 <span class="badge bg-success">Выгодно</span>
               </div>
-              <h3 class="card-title h5">Комплекс «Отец + Сын»</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Комплекс «Отец + Сын»</h2>
+              <p class="card-text text-muted small">
                 Совместный визит для отца и ребёнка до 12 лет: две полноценные стрижки со скидкой 300 рублей.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -369,17 +389,18 @@
         <!-- 8. Матовая глина для укладки -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="cosmetics" data-price="950" data-promo="true">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-droplet-half"></i></div>
               <span class="small text-uppercase text-muted">Мужская косметика</span>
-              <strong class="mt-1">Объём: 100 мл · Сильная фиксация</strong>
+              <strong class="small mt-1">Объём: 100 мл · Сильная фиксация</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
                 <span class="badge bg-success">В наличии</span>
-                <span class="badge bg-warning text-dark ms-1">Хит</span>
+                <span class="badge bg-primary ms-1">Хит</span>
               </div>
-              <h3 class="card-title h5">Матовая глина для укладки волос</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Матовая глина для укладки волос</h2>
+              <p class="card-text text-muted small">
                 Фиксирует форму стрижки на весь день без жирного блеска и легко смывается тёплой водой.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -398,19 +419,20 @@
           </article>
         </div>
 
-        <!-- 9. Подарочный набор (пример состояния disabled кнопки) -->
+        <!-- 9. Подарочный набор -->
         <div class="col-12 col-md-6 col-lg-4 catalog-item" data-category="cosmetics" data-price="2600" data-promo="false">
           <article class="card h-100 shadow-sm service-card">
-            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center">
+            <div class="placeholder-card p-4 text-center d-flex flex-column justify-content-center align-items-center">
+              <div class="card-icon-badge mb-2" aria-hidden="true"><i class="bi bi-gift"></i></div>
               <span class="small text-uppercase text-muted">Мужская косметика</span>
-              <strong class="mt-1">Масло 30 мл + шампунь + гребень</strong>
+              <strong class="small mt-1">Масло 30 мл + шампунь + гребень</strong>
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
                 <span class="badge bg-secondary">Ожидается поставка</span>
               </div>
-              <h3 class="card-title h5">Набор для ухода за бородой</h3>
-              <p class="card-text text-muted">
+              <h2 class="card-title h5 fw-semibold">Набор для ухода за бородой</h2>
+              <p class="card-text text-muted small">
                 Подарочный бокс с натуральным маслом, мягким шампунем для бороды и деревянным гребнем.
               </p>
               <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -428,8 +450,8 @@
 
     <!-- Сводная таблица прайс-листа -->
     <section class="my-5" id="priceTable">
-      <h2 class="h4 mb-3">Сводный прайс-лист по категориям мастеров</h2>
-      <div class="table-responsive shadow-sm rounded">
+      <h2 class="h4 fw-bold mb-3">Сводный прайс-лист по категориям мастеров</h2>
+      <div class="table-responsive shadow-sm rounded-3 overflow-hidden">
         <table class="table table-striped table-hover table-bordered align-middle mb-0 bg-white">
           <thead class="table-dark">
             <tr>
@@ -483,12 +505,12 @@
   </main>
 
   <!-- Подвал -->
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="site-footer text-white py-4 mt-5">
     <div class="container">
       <div class="row align-items-center g-3">
         <div class="col-12 col-md-6">
           <p class="mb-1 fw-semibold">&copy; 2026 barbermirea — Сайт барбершопа</p>
-          <p class="mb-0 small text-secondary">
+          <p class="mb-0 small text-white-50">
             Учебный проект КР №3 — Серебренников Матвей, ЭФБО-11-25
           </p>
         </div>
@@ -511,7 +533,7 @@
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header bg-primary text-white">
+        <div class="modal-header bg-dark text-white">
           <h2 class="modal-title h5" id="bookingModalLabel">Онлайн-запись в barbermirea</h2>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
@@ -602,7 +624,7 @@
   </div>
 
   <button id="backToTopBtn" class="btn btn-primary btn-sm shadow back-to-top" type="button" aria-label="Вернуться наверх">
-    Наверх
+    <i class="bi bi-arrow-up me-1" aria-hidden="true"></i>Наверх
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
