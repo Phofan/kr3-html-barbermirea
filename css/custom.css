@@ -123,7 +123,7 @@ main {
 }
 
 .placeholder-card {
-  min-height: 136px;
+  min-height: 92px;
   background: linear-gradient(180deg, #EFE9DF 0%, #E7DFD2 100%);
   border-bottom: 1px solid var(--bs-border-color);
 }
