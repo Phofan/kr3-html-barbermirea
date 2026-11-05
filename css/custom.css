@@ -82,7 +82,7 @@ main {
 .footer-nav__link {
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.95rem;
-  padding: 0.35rem 0.75rem;
+  padding: 0.2rem 0;
   transition: color 0.15s ease;
 }
 
@@ -169,8 +169,26 @@ main {
   border-bottom: 1px solid var(--bs-border-color);
 }
 
-.card-photo--lion {
-  object-position: center 28%;
+.card-photo--collage {
+  object-fit: contain;
+  object-position: center;
+  background-color: #c0bebf;
+}
+
+.card-photo--top {
+  object-position: center 8%;
+}
+
+.card-photo--focus-25 {
+  object-position: center 25%;
+}
+
+.card-photo--focus-30 {
+  object-position: center 30%;
+}
+
+.card-photo--focus-38 {
+  object-position: center 38%;
 }
 
 .card-photo--mid {
