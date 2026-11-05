@@ -43,7 +43,7 @@ barbershop/
 | **Кнопки** | `btn`, `btn-primary`, `btn-outline-primary`, `btn-outline-secondary`, размеры `btn-sm` / `btn-lg`, состояние `disabled` |
 | **Формы** | `form-control`, `form-select`, `input-group` (`+7` и строка поиска), `form-check`, валидация `.needs-validation` + `.invalid-feedback` |
 | **Модальное окно** | `modal` (`#bookingModal`) для онлайн-записи с любой страницы сайта |
-| **Сообщения** | Закрываемый `alert-primary` с акцией на главной, `alert-info` на странице мастеров, `alert-warning` при пустом поиске, `alert-success` при отправке записи |
+| **Сообщения** | `alert-info` на странице мастеров, `alert-warning` при пустом поиске в каталоге, `alert-success` при отправке записи |
 | **Значки** | `badge` («Хит», «Выгодно», «Новинка», категории «Топ-барбер» / «Старший барбер» / «Барбер», счётчик позиций каталога) |
 | **Дополнительно** | `accordion` (блок частых вопросов FAQ на главной), адаптивные таблицы `table-responsive` + `table-striped table-hover` |
 
