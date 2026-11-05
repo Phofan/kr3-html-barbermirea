@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="О барбершопе BarberLine: адрес, график работы, контакты и форма онлайн-записи.">
-  <title>О барбершопе и контакты — Барбершоп BarberLine</title>
+  <meta name="description" content="О барбершопе barbermirea: адрес, график работы, контакты и форма онлайн-записи.">
+  <title>О барбершопе и контакты — Барбершоп barbermirea</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -13,71 +13,55 @@
 </head>
 <body>
 
-  <!-- Шапка страницы -->
-  <header class="bg-primary text-white py-3">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-8">
-          <h1 class="h4 mb-1 fw-bold">BarberLine — мужской барбершоп</h1>
-          <p class="mb-0 small opacity-75">
-            Каталог услуг, мужской уход и онлайн-запись на Bootstrap 5
-          </p>
-        </div>
-        <div class="col-12 col-md-4 text-md-end mt-2 mt-md-0">
-          <span class="badge bg-light text-primary me-2">КР №2</span>
-          <span class="small">Ежедневно 10:00–22:00</span>
+  <!-- Шапка и адаптивная навигация Bootstrap -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">barbermirea</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Переключить навигацию"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Каталог и цены</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="masters.html">Наши мастера</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contacts.html">О нас и контакты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#faq">FAQ</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <button
+                class="btn btn-primary btn-sm"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#bookingModal"
+              >
+                Онлайн-запись
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
-
-  <!-- Адаптивная навигация Bootstrap -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Основная навигация">
-    <div class="container">
-      <a class="navbar-brand fw-semibold" href="index.html">BarberLine</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог и цены</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="masters.html">Наши мастера</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="contacts.html">О нас и контакты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#faq">FAQ</a>
-          </li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <button
-              class="btn btn-primary btn-sm"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#bookingModal"
-            >
-              Онлайн-запись
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
   <main class="container my-4">
     <!-- Хлебные крошки -->
@@ -93,9 +77,9 @@
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-7">
           <span class="badge bg-primary mb-2">О нас</span>
-          <h2 class="mb-3">О барбершопе BarberLine</h2>
+          <h1 class="h2 mb-3">О барбершопе barbermirea</h1>
           <p class="text-muted">
-            <strong>BarberLine</strong> — это мужской барбершоп, созданный для тех, кто ценит аккуратный внешний вид,
+            <strong>barbermirea</strong> — это мужской барбершоп, созданный для тех, кто ценит аккуратный внешний вид,
             пунктуальность и понятный сервис без навязывания лишних процедур.
           </p>
           <p class="text-muted mb-0">
@@ -108,7 +92,7 @@
         <div class="col-12 col-lg-5">
           <div class="placeholder-box p-4 rounded text-center d-flex flex-column justify-content-center">
             <span class="badge bg-secondary align-self-center mb-2">Комфорт для гостей</span>
-            <h3 class="h6 fw-bold mb-2">Что ждёт вас в зале BarberLine</h3>
+            <h2 class="h6 fw-bold mb-2">Что ждёт вас в зале barbermirea</h2>
             <p class="small text-muted mb-3">
               Зона ожидания, гардероб, зарядные станции для смартфонов, бесплатный Wi-Fi и гостевая парковка у входа.
             </p>
@@ -163,8 +147,8 @@
               <h3 class="h5 card-title">Контакты</h3>
               <ul class="list-unstyled mb-2">
                 <li><strong>Телефон:</strong> <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
-                <li><strong>Email:</strong> <a href="mailto:hello@barberline.ru">hello@barberline.ru</a></li>
-                <li><strong>Telegram:</strong> @barberline_moscow</li>
+                <li><strong>Email:</strong> <a href="mailto:hello@barbermirea.ru">hello@barbermirea.ru</a></li>
+                <li><strong>Telegram:</strong> @barbermirea</li>
               </ul>
               <p class="small text-muted mb-0">
                 Отвечаем в мессенджере в течение 5 минут в рабочее время.
@@ -186,7 +170,7 @@
                 <span class="badge bg-secondary align-self-center mb-2">Схема проезда</span>
                 <strong class="mb-1">Москва, пр-т Вернадского, д. 78</strong>
                 <p class="small text-muted mb-0">
-                  Выход №3 из метро «Юго-Западная», прямо вдоль проспекта 400 метров до вывески «BarberLine».
+                  Выход №3 из метро «Юго-Западная», прямо вдоль проспекта 400 метров до вывески «barbermirea».
                 </p>
               </div>
               <div class="small text-muted">
@@ -303,7 +287,7 @@
     <div class="container">
       <div class="row align-items-center g-3">
         <div class="col-12 col-md-6">
-          <p class="mb-1 fw-semibold">&copy; 2026 BarberLine — Сайт барбершопа</p>
+          <p class="mb-1 fw-semibold">&copy; 2026 barbermirea — Сайт барбершопа</p>
           <p class="mb-0 small text-secondary">
             Учебный проект КР №2 (Bootstrap 5) · Серебренников Матвей, ЭФБО-11-25
           </p>
@@ -328,7 +312,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header bg-primary text-white">
-          <h2 class="modal-title h5" id="bookingModalLabel">Онлайн-запись в BarberLine</h2>
+          <h2 class="modal-title h5" id="bookingModalLabel">Онлайн-запись в barbermirea</h2>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
         <div class="modal-body">
