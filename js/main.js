@@ -206,15 +206,34 @@ function initCatalogFilters() {
 }
 
 /**
- * Показ и плавный скролл кнопки «Наверх»
+ * Показ и плавный скролл кнопки «Наверх» без наезда на подвал сайта
  */
 function initBackToTop() {
   const backToTopBtn = document.getElementById('backToTopBtn');
+  const footer = document.querySelector('.site-footer');
   if (!backToTopBtn) return;
 
-  window.addEventListener('scroll', () => {
-    backToTopBtn.classList.toggle('is-visible', window.scrollY > 300);
-  });
+  const baseBottom = 20;
+
+  function updateBackToTopPosition() {
+    const isVisible = window.scrollY > 300;
+    backToTopBtn.classList.toggle('is-visible', isVisible);
+
+    if (!isVisible || !footer) return;
+
+    const footerRect = footer.getBoundingClientRect();
+    const footerOverlap = window.innerHeight - footerRect.top;
+
+    if (footerOverlap > 0) {
+      backToTopBtn.style.bottom = `${footerOverlap + baseBottom}px`;
+    } else {
+      backToTopBtn.style.bottom = `${baseBottom}px`;
+    }
+  }
+
+  window.addEventListener('scroll', updateBackToTopPosition, { passive: true });
+  window.addEventListener('resize', updateBackToTopPosition, { passive: true });
+  updateBackToTopPosition();
 
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

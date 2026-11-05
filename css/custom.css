@@ -64,6 +64,38 @@ main {
   font-size: 0.95rem;
 }
 
+/* Телефон и часы звонков в шапке и подвале */
+.header-phone__link {
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.header-phone__link:hover {
+  color: #e09b67 !important;
+}
+
+.header-phone__hours {
+  font-size: 0.75rem;
+}
+
+/* Навигационные ссылки в подвале в стиле шапки */
+.footer-nav__link {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+  padding: 0.35rem 0.75rem;
+  transition: color 0.15s ease;
+}
+
+.footer-nav__link:hover,
+.footer-nav__link:focus {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-nav__link.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
 /* Темизация кнопок через штатные переменные Bootstrap 5.3 */
 .btn-primary {
   --bs-btn-bg: var(--barber-copper);
